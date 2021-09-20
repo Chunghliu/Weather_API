@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calling API</title>
+</head>
+<body>
+    <div>
+       Hello
+    </div>
+    <div>
+        <img src="https://www.hko.gov.hk/images/HKOWxIconOutline/pic<%= icon %>.png">
+    </div>
+    <div>
+        <% for(var i=0; i<weather["temperature"]["data"].length; i++) { %>
+            <div>
+                <%= weather.temperature.data[i].place %>
+                <%= weather.temperature.data[i].value %>
+                <%= weather.temperature.data[i].unit %>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
